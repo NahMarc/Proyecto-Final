@@ -8,6 +8,7 @@ import com.porfolionahuel.argprog.Entity.Persona;
 import com.porfolionahuel.argprog.Interface.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,10 +23,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @author monch
  */
 @RestController
+@CrossOrigin(origins = "https://localhost:4200")
 public class PersonaController {
     @Autowired IPersonaService ipersonaService;
     
-    @GetMapping("personas/traer")
+    @GetMapping("/personas/traer")
     public List<Persona> getPersona() {
         return ipersonaService.getPersona();
     }
@@ -36,13 +38,13 @@ public class PersonaController {
         return "La Persona fue creada exitosamente";
     }
     
-    @DeleteMapping("/personas/borrar/(id)")
+    @DeleteMapping("/personas/borrar/{id}")
     public String deletePersona(@PathVariable Long id) {
         ipersonaService.deletePersona(id);
         return "La Persona fue borrada exitosamente";
     }
     
-    @PutMapping("/personas/editar/(id)")
+    @PutMapping("/personas/editar/{id}")
     public Persona editPersona(@PathVariable Long id,
                                @RequestParam("nombre") String nuevoNombre,
                                @RequestParam("apellido") String nuevoApellido,
