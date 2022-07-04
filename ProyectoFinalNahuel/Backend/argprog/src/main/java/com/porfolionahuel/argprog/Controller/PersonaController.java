@@ -23,13 +23,19 @@ import org.springframework.web.bind.annotation.RestController;
  * @author monch
  */
 @RestController
-@CrossOrigin(origins = "https://localhost:4200")
+@CrossOrigin(origins = "http://localhost:8080")
 public class PersonaController {
     @Autowired IPersonaService ipersonaService;
     
     @GetMapping("/personas/traer")
     public List<Persona> getPersona() {
         return ipersonaService.getPersona();
+    }
+    
+    @GetMapping("/personas/encontrar/{id}")
+    public Persona findPersona(@PathVariable Long id){
+        Persona persona = ipersonaService.findPersona(id);
+        return persona;
     }
     
     @PostMapping("/personas/crear")
