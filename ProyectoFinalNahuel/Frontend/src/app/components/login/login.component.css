@@ -1,63 +1,10 @@
-body{
-    background-color: #000;
-  }
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #6a11cb;
   
-  .card{
-    width: 400px;
-    border:none; 
-  }
-   
-  .btr{
-    border-top-right-radius: 5px !important;
-  }
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
   
-  
-  .btl{
-    border-top-left-radius: 5px !important;
-  }
-  
-  .btn-dark {
-      color: #fff;
-      background-color: #0d6efd;
-      border-color: #0d6efd;
-  }
-  
-  .btn-dark:hover {
-      color: #fff;
-      background-color: #0d6efd;
-      border-color: #0d6efd;
-  }
-   
-  .nav-pills{
-    display:table !important;
-    width:100%;
-  }
-  
-  .nav-pills .nav-link {
-      border-radius: 0px;
-          border-bottom: 1px solid #0d6efd40;
-  
-  }
-  
-  .nav-item{
-        display: table-cell;
-         background: #0d6efd2e;
-  }
-  
-  .form{
-    padding: 10px;
-        height: 300px;
-  }
-  
-  .form input{
-    margin-bottom: 12px;
-    border-radius: 3px;
-  }
-   
-  .form input:focus{
-    box-shadow: none;
-  }
-   
-  .form button{
-    margin-top: 20px;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
   }
