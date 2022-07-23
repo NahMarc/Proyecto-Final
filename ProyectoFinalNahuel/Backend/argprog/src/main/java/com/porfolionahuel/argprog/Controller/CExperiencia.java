@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("explab")
 @CrossOrigin(origins = "http://localhost:4200")
+        //(origins = "*", allowedHeaders = "*")
 public class CExperiencia {
     @Autowired
     SExperiencia sExperiencia;
@@ -68,7 +69,7 @@ public class CExperiencia {
         experiencia.setDescripcionExp((dtoexp.getDescripcionExp()));
         
         sExperiencia.save(experiencia);
-        return new ResponseEntity(new Mensaje("Expereincia actualizada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);
     }
     
     @GetMapping("/detail/{id}")
