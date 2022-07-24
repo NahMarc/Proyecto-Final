@@ -7,10 +7,7 @@ package com.porfolionahuel.argprog.Interface;
 import com.porfolionahuel.argprog.Entity.Persona;
 import java.util.List;
 
-/**
- *
- * @author monch
- */
+
 public interface IPersonaService {
     // Traer una lista de personas
     public List<Persona> getPersona();

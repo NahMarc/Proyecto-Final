@@ -6,9 +6,11 @@ import { persona } from '../model/persona.model';
 @Injectable({
   providedIn: 'root'
 })
+
 export class PersonaService {
-  URL = 'https://localhost:8080/personas/';
+  URL = 'http://localhost:8080/personas/';
 /* http://localhost:8080 */
+
   constructor(private http: HttpClient) { }
 
   public getPersona(): Observable<persona>{
