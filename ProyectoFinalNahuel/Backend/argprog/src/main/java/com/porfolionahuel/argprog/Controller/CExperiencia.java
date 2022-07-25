@@ -66,7 +66,7 @@ public class CExperiencia {
         
         Experiencia experiencia = sExperiencia.getOne(id).get();
         experiencia.setNombreExp(dtoexp.getNombreExp());
-        experiencia.setDescripcionExp((dtoexp.getDescripcionExp()));
+        experiencia.setDescripcionExp(dtoexp.getDescripcionExp());
         
         sExperiencia.save(experiencia);
         return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);
