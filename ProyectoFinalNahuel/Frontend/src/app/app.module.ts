@@ -22,6 +22,8 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
 import { EditExpComponent } from './components/experiencia/edit-exp.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { NewEducacionComponent } from './components/educacion/new-educacion.component';
+import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { CommonModule } from '@angular/common';
     LoginComponent,
     NewExperienciaComponent,
     EditExpComponent,
+    NewEducacionComponent,
+    EditEducacionComponent,
   ],
   imports: [
     BrowserModule,
