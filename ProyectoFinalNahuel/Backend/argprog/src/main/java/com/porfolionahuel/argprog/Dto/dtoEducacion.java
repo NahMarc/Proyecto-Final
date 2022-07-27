@@ -13,20 +13,20 @@ public class dtoEducacion {
     @NotBlank
     private String nombreCarrera;
     @NotBlank
-    private int añoInicio;
+    private String anoInicio;
     @NotBlank
-    private int añoFin;
+    private String anoFin;
     
     //Constructores
 
     public dtoEducacion() {
     }
 
-    public dtoEducacion(String nombreInsti, String nombreCarrera, int añoInicio, int añoFin) {
+    public dtoEducacion(String nombreInsti, String nombreCarrera, String anoInicio, String anoFin) {
         this.nombreInsti = nombreInsti;
         this.nombreCarrera = nombreCarrera;
-        this.añoInicio = añoInicio;
-        this.añoFin = añoFin;
+        this.anoInicio = anoInicio;
+        this.anoFin = anoFin;
     }
     
     //Getters y Setters
@@ -47,25 +47,21 @@ public class dtoEducacion {
         this.nombreCarrera = nombreCarrera;
     }
 
-    public int getAñoInicio() {
-        return añoInicio;
+    public String getAnoInicio() {
+        return anoInicio;
     }
 
-    public void setAñoInicio(int añoInicio) {
-        this.añoInicio = añoInicio;
+    public void setAnoInicio(String anoInicio) {
+        this.anoInicio = anoInicio;
     }
 
-    public int getAñoFin() {
-        return añoFin;
+    public String getAnoFin() {
+        return anoFin;
     }
 
-    public void setAñoFin(int añoFin) {
-        this.añoFin = añoFin;
-    }
-    
-    
-
-    
+    public void setAnoFin(String anoFin) {
+        this.anoFin = anoFin;
+    }  
     
     
 }

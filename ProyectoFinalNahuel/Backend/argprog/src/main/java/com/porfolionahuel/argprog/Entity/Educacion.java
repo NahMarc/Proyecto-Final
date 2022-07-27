@@ -16,22 +16,22 @@ public class Educacion {
     private int id;
     private String nombreInsti;
     private String nombreCarrera;
-    private int añoInicio;
-    private int añoFin;
+    private String anoInicio;
+    private String anoFin;
     
     //Constructores
 
     public Educacion() {
     }
 
-    public Educacion(String nombreInsti, String nombreCarrera, int añoInicio, int añoFin) {
+    public Educacion(String nombreInsti, String nombreCarrera, String anoInicio, String anoFin) {
+        this.id = id;
         this.nombreInsti = nombreInsti;
         this.nombreCarrera = nombreCarrera;
-        this.añoInicio = añoInicio;
-        this.añoFin = añoFin;
+        this.anoInicio = anoInicio;
+        this.anoFin = anoFin;
     }
 
-    
     
     //Getters y Setters
 
@@ -59,26 +59,23 @@ public class Educacion {
         this.nombreCarrera = nombreCarrera;
     }
 
-    public int getAñoInicio() {
-        return añoInicio;
+    public String getAnoInicio() {
+        return anoInicio;
     }
 
-    public void setAñoInicio(int añoInicio) {
-        this.añoInicio = añoInicio;
+    public void setAnoInicio(String anoInicio) {
+        this.anoInicio = anoInicio;
     }
 
-    public int getAñoFin() {
-        return añoFin;
+    public String getAnoFin() {
+        return anoFin;
     }
 
-    public void setAñoFin(int añoFin) {
-        this.añoFin = añoFin;
+    public void setAnoFin(String anoFin) {
+        this.anoFin = anoFin;
     }
+
     
-    
-
-   
-
     
      
 }

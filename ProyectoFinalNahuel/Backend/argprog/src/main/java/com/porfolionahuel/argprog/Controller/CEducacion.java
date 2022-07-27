@@ -47,7 +47,8 @@ public class CEducacion {
         if(sEducacion.existsByNombreCarrera(dtoeduc.getNombreCarrera()))
             return new ResponseEntity(new Mensaje("Esa carrera/curso no existe"), HttpStatus.BAD_REQUEST);
            
-        Educacion educacion = new Educacion(dtoeduc.getNombreInsti(), dtoeduc.getNombreCarrera(), dtoeduc.getAñoInicio(), dtoeduc.getAñoFin());
+        //Educacion educacion = new Educacion(dtoeduc.getNombreInsti(), dtoeduc.getNombreCarrera(), dtoeduc.getAnoInicio(), dtoeduc.getAnoFin());
+        Educacion educacion = new Educacion(dtoeduc.getNombreInsti(), dtoeduc.getNombreCarrera(), dtoeduc.getAnoInicio(), dtoeduc.getAnoFin());
         sEducacion.save(educacion);
         
         return new ResponseEntity(new Mensaje("Educación agregada"), HttpStatus.OK);
@@ -80,8 +81,8 @@ public class CEducacion {
         Educacion educacion = sEducacion.getOne(id).get();
         educacion.setNombreInsti(dtoeduc.getNombreInsti());
         educacion.setNombreCarrera(dtoeduc.getNombreCarrera());
-        educacion.setAñoInicio(dtoeduc.getAñoInicio());
-        educacion.setAñoFin(dtoeduc.getAñoFin());
+        educacion.setAnoInicio(dtoeduc.getAnoInicio());
+        educacion.setAnoFin(dtoeduc.getAnoFin());
         
         sEducacion.save(educacion);
         return new ResponseEntity(new Mensaje("Educacion actualizada"), HttpStatus.OK);

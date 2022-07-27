@@ -11,8 +11,8 @@ import { SEducacionService } from 'src/app/service/s-educacion.service';
 export class NewEducacionComponent implements OnInit {
   nombreInsti: string = '';
   nombreCarrera: string = '';
-  anoInicio: number = 0;
-  anoFin: number = 0;
+  anoInicio: string = '';
+  anoFin: string = '';
 
   constructor(private sEducacion: SEducacionService, private router: Router) { }
 
