@@ -25,7 +25,6 @@ public class Educacion {
     }
 
     public Educacion(String nombreInsti, String nombreCarrera, String anoInicio, String anoFin) {
-        this.id = id;
         this.nombreInsti = nombreInsti;
         this.nombreCarrera = nombreCarrera;
         this.anoInicio = anoInicio;

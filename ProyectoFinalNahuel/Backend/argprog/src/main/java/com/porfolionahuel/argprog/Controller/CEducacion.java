@@ -77,6 +77,14 @@ public class CEducacion {
         if(StringUtils.isBlank(dtoeduc.getNombreCarrera()))
             return new ResponseEntity(new Mensaje("Es obligatorio el campo nombre de la carrera/curso"), HttpStatus.BAD_REQUEST);
         
+        //Comprueba que el campo anoInicio no esté vacío
+        if(StringUtils.isBlank(dtoeduc.getAnoInicio()))
+            return new ResponseEntity(new Mensaje("Es obligatorio el campo año de inicio"), HttpStatus.BAD_REQUEST);
+        
+        //Comprueba que el campo anoFin no esté vacío
+        if(StringUtils.isBlank(dtoeduc.getAnoFin()))
+            return new ResponseEntity(new Mensaje("Es obligatorio el campo año de finalización"), HttpStatus.BAD_REQUEST);
+        
         
         Educacion educacion = sEducacion.getOne(id).get();
         educacion.setNombreInsti(dtoeduc.getNombreInsti());
