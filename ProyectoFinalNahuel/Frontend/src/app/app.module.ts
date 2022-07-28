@@ -24,6 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NewEducacionComponent } from './components/educacion/new-educacion.component';
 import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
+import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
+import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { EditEducacionComponent } from './components/educacion/edit-educacion.co
     EditExpComponent,
     NewEducacionComponent,
     EditEducacionComponent,
+    EditProyectosComponent,
+    NewProyectosComponent,
   ],
   imports: [
     BrowserModule,

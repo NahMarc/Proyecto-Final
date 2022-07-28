@@ -1,0 +1,27 @@
+<div class="container" *ngIf="proyEdit">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreProy">Nombre del proyecto realizado</label>
+                    <input type="text" class="form-control" id="nombreProy" name="nombreProy" [(ngModel)]="proyEdit.nombreProy" required>
+                </div>
+                <div class="form-group">
+                    <label for="descriProy">Descripción del proyecto</label>
+                    <input type="text" class="form-control" id="descriProy" name="descriProy" [(ngModel)]="proyEdit.descriProy" required>
+                </div>
+                <div class="form-group">
+                    <label for="imgProy">Imagen del proyecto</label>
+                    <input type="text" class="form-control" id="imgProy" name="imgProy" [(ngModel)]="proyEdit.imgProy" required>
+                </div>
+                <div class="form-group">
+                    <label for="linkProy">Link de acceso al proyecto</label>
+                    <input type="text" class="form-control" id="linkProy" name="linkProy" [(ngModel)]="proyEdit.linkProy" required>
+                </div>
+                <button class="btn btn-primary">
+                    Actualizar proyecto
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
