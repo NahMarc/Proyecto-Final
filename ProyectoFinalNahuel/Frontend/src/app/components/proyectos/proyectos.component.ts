@@ -32,7 +32,7 @@ export class ProyectosComponent implements OnInit {
   
   }
 
-  delete(id?: number){
+  delete(id: number){
     if(id != undefined){
       this.sProyectos.delete(id).subscribe(
         data => {

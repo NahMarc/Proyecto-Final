@@ -7,10 +7,7 @@ package com.porfolionahuel.argprog.Security.Dto;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- *
- * @author monch
- */
+
 public class NuevoUsuario {
     private String nombre;
     private String nombreUsuario;

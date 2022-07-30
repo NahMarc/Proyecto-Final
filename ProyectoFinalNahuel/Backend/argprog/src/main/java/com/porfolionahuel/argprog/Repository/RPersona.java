@@ -8,12 +8,8 @@ import com.porfolionahuel.argprog.Entity.Persona;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author monch
- */
 
 @Repository
-public interface IPersonaRepository extends JpaRepository<Persona,Long> {
+public interface RPersona extends JpaRepository<Persona,Long> {
     
 }

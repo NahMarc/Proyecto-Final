@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoArgProgComponent } from './components/logo-arg-prog/logo-arg-prog.component';
-import { BannerComponent } from './components/banner/banner.component';
 import { SobreMiComponent } from './components/sobre-mi/sobre-mi.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
@@ -33,7 +32,6 @@ import { NewProyectosComponent } from './components/proyectos/new-proyectos.comp
     AppComponent,
     HeaderComponent,
     LogoArgProgComponent,
-    BannerComponent,
     SobreMiComponent,
     ExperienciaComponent,
     EducacionComponent,

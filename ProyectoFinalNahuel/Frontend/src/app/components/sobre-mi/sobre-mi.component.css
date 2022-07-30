@@ -14,3 +14,15 @@ div{
 #fotoperfil{
     border-radius: 100%;
 }
+
+/* estilo de foto de banner */
+#fotobanner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* estilo botón */
+.btn{
+    size: 3em;
+}
