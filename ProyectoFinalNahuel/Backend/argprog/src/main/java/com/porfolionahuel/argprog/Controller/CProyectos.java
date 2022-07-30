@@ -46,8 +46,6 @@ public class CProyectos {
             return new ResponseEntity(new Mensaje("La imagen del proyecto es obligatoria"), HttpStatus.BAD_REQUEST);
         if(StringUtils.isBlank(dtoproy.getLinkProy()))
             return new ResponseEntity(new Mensaje("El link del proyecto es obligatorio"), HttpStatus.BAD_REQUEST);
-        if(sProyectos.existsByNombreProy(dtoproy.getNombreProy()))
-            return new ResponseEntity(new Mensaje("Ese proyecto no existe"), HttpStatus.BAD_REQUEST);
            
         Proyectos proyecto = new Proyectos(dtoproy.getNombreProy(), dtoproy.getDescriProy(), dtoproy.getImgProy(), dtoproy.getLinkProy());
         sProyectos.save(proyecto);
@@ -61,10 +59,6 @@ public class CProyectos {
         //Se valida la existencia del ID
         if(!sProyectos.existsById(id))
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
-        
-        //Se compara el nombre de los proyectos
-        if(sProyectos.existsByNombreProy(dtoproy.getNombreProy()) && sProyectos.getByNombreProy(dtoproy.getNombreProy()).get().getId() != id)
-            return new ResponseEntity(new Mensaje("Ese proyecto no existe"), HttpStatus.BAD_REQUEST);
         
         //Comprueba que el campo nombreProy no esté vacío
         if(StringUtils.isBlank(dtoproy.getNombreProy()))

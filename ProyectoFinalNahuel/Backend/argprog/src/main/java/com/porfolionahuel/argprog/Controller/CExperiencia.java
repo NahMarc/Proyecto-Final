@@ -41,8 +41,9 @@ public class CExperiencia {
     public ResponseEntity<?> create(@RequestBody dtoExperiencia dtoexp){
         if(StringUtils.isBlank(dtoexp.getNombreExp()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-        if(sExperiencia.existsByNombreExp(dtoexp.getNombreExp()))
-            return new ResponseEntity(new Mensaje("Esa experiencia no existe"), HttpStatus.BAD_REQUEST);
+        
+        if(StringUtils.isBlank(dtoexp.getDescripcionExp()))
+            return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
             
         Experiencia experiencia = new Experiencia(dtoexp.getNombreExp(), dtoexp.getDescripcionExp());
         sExperiencia.save(experiencia);

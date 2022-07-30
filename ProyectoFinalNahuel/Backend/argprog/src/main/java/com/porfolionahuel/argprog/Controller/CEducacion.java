@@ -43,10 +43,7 @@ public class CEducacion {
             return new ResponseEntity(new Mensaje("El nombre de la institución es obligatorio"), HttpStatus.BAD_REQUEST);
         if(StringUtils.isBlank(dtoeduc.getNombreCarrera()))
             return new ResponseEntity(new Mensaje("El nombre de la carrera/curso es obligatorio"), HttpStatus.BAD_REQUEST);
-        if(sEducacion.existsByNombreInsti(dtoeduc.getNombreInsti()))
-            return new ResponseEntity(new Mensaje("Esa institución no existe"), HttpStatus.BAD_REQUEST);
-        if(sEducacion.existsByNombreCarrera(dtoeduc.getNombreCarrera()))
-            return new ResponseEntity(new Mensaje("Esa carrera/curso no existe"), HttpStatus.BAD_REQUEST);
+        
            
         //Educacion educacion = new Educacion(dtoeduc.getNombreInsti(), dtoeduc.getNombreCarrera(), dtoeduc.getAnoInicio(), dtoeduc.getAnoFin());
         Educacion educacion = new Educacion(dtoeduc.getNombreInsti(), dtoeduc.getNombreCarrera(), dtoeduc.getAnoInicio(), dtoeduc.getAnoFin());
@@ -61,14 +58,6 @@ public class CEducacion {
         //Se valida la existencia del ID
         if(!sEducacion.existsById(id))
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
-        
-        //Se compara el nombre de las instituciones
-        if(sEducacion.existsByNombreInsti(dtoeduc.getNombreInsti()) && sEducacion.getByNombreInsti(dtoeduc.getNombreInsti()).get().getId() != id)
-            return new ResponseEntity(new Mensaje("Esa institución no existe"), HttpStatus.BAD_REQUEST);
-        
-        //Se compara el nombre de las carreras
-        if(sEducacion.existsByNombreCarrera(dtoeduc.getNombreCarrera()) && sEducacion.getByNombreCarrera(dtoeduc.getNombreCarrera()).get().getId() != id)
-            return new ResponseEntity(new Mensaje("Esa carrera no existe"), HttpStatus.BAD_REQUEST);
         
         //Comprueba que el campo nombreInsti no esté vacío
         if(StringUtils.isBlank(dtoeduc.getNombreInsti()))
