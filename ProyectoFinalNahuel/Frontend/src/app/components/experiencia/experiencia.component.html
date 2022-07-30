@@ -1,28 +1,41 @@
 <div class="row">
     <h1>Experiencia laboral</h1>
-    <div class="col-lg-2">
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
         <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
             <i class="bi bi-plus-square"></i>
             Nueva experiencia
         </button>
     </div>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <table class="table">
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-11">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+                <tr>
+                    <td>Nombre de la experiencia</td>
+                    <td>Descripción</td>
+                    <td *ngIf="isLogged">
+                         Edición
+                    </td>
+                    <td *ngIf="isLogged">
+                         Borrado
+                    </td>
+                </tr>
+            </thead>
             <tbody>
                 <tr *ngFor="let Experiencia of expe">
                     <td>{{Experiencia.nombreExp}}</td>
                     <td>{{Experiencia.descripcionExp}}</td>
                     <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
-                        <i class="bi bi-pencil-square"></i>Editar</button>
+                         <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
+                         <i class="bi bi-pencil-square"></i>Editar</button>
                     </td>
                     <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(Experiencia.id)">
-                            <i class="bi bi-trash-fill"></i> Borrar</button>
+                         <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+                         <i class="bi bi-trash-fill"></i> Borrar</button>
                     </td>
                 </tr>
             </tbody>
-        </table>
+          </table>
+        </div>
     </div> 
 </div>

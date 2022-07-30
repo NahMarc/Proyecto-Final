@@ -6,9 +6,23 @@
             Nuevo proyecto
         </button>
     </div>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <table class="table">
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-11">
+        <div class="table-responsive">
+         <table class="table">
+            <thead>
+                <tr>
+                    <td>Nombre del Proyecto</td>
+                    <td>Descripción del Proyecto</td>
+                    <td>Imagen del Proyecto</td>
+                    <td>Link al proyecto</td>
+                    <td *ngIf="isLogged">
+                         Edición
+                    </td>
+                    <td *ngIf="isLogged">
+                         Borrado
+                    </td>
+                </tr>
+            </thead>
             <tbody>
                 <tr *ngFor="let Proyecto of proy">
                     <td>{{Proyecto.nombreProy}}</td>
@@ -25,6 +39,7 @@
                     </td>
                 </tr>
             </tbody>
-        </table>
+         </table>
+        </div>
     </div> 
 </div>

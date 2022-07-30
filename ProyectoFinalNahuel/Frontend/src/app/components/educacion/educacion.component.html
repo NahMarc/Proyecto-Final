@@ -6,9 +6,23 @@
             Nueva educacion
         </button>
     </div>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <table class="table">
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-11">
+        <div class="table-responsive">
+         <table class="table">
+            <thead>
+                <tr>
+                    <td>Nombre de la institucion</td>
+                    <td>Nombre del curso/carrera</td>
+                    <td>Año de inicio</td>
+                    <td>Año de finalización</td>
+                    <td *ngIf="isLogged">
+                         Edición
+                    </td>
+                    <td *ngIf="isLogged">
+                         Borrado
+                    </td>
+                </tr>
+            </thead>
             <tbody>
                 <tr *ngFor="let Educacion of educ">
                     <td>{{Educacion.nombreInsti}}</td>
@@ -25,6 +39,7 @@
                     </td>
                 </tr>
             </tbody>
-        </table>
+         </table>
+        </div>
     </div> 
 </div>
