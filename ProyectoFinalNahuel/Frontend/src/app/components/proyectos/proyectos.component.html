@@ -27,7 +27,9 @@
                 <tr *ngFor="let Proyecto of proy">
                     <td>{{Proyecto.nombreProy}}</td>
                     <td>{{Proyecto.descriProy}}</td>
-                    <td>{{Proyecto.imgProy}}</td>
+                    <td>
+                        <img src="../../../assets/Plantilla.png" class="img-fluid" id="fotoproyecto" />
+                    </td>
                     <td>{{Proyecto.linkProy}}</td>
                     <td *ngIf="isLogged">
                         <button class="btn btn-light" routerLink="/editproy/{{Proyecto.id}}">
