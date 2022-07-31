@@ -1,6 +1,6 @@
 <div class="banner">
     <!-- PONER <img [src]="persona.imgbanner" alt="imagen banner" id="fotobanner" /> -->
-   <img src="../../../assets/banner2.jpg" alt="imagen banner" class="img-fluid" id="fotobanner" />
+   <img src="../../../assets/banner2v2.jpg" alt="imagen banner" class="img-fluid" id="fotobanner" />
 </div>
 <div class="row">
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
@@ -8,157 +8,15 @@
     <img src="../../../assets/fotoperfil1.jpg" alt="imagen perfil" class="img-fluid" id="fotoperfil" />
   </div>
   <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-    <p id="nombre">{{ persona.nombre }} {{ persona.apellido }}</p>
-    <p>{{ persona.titulo }}</p>
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#editPersonaModal"
-      (click)="onOpenModal('edit', persona)"
-      *ngIf="isLogged"
-    >
-    Editar Perfil
-      <i class="bi bi-pencil-square"></i>
-    </button>
+    <p id="nombre">{{ perso.nombre }} {{ perso.apellido }}</p>
+    <p>{{ perso.titulo }}</p>
   </div>
   <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
     <span>
       <h1>Sobre mí</h1>
-      <p>{{ persona.sobremi }}</p>
+      <p>{{ perso.sobremi }}</p>
     </span>
   </div>
 </div>
 
 
-<!--Edit Modal -->
-
-<div
-  class="modal fade"
-  id="editPersonaModal"
-  data-bs-backdrop="static"
-  data-bs-keyboard="false"
-  tabindex="-1"
-  aria-labelledby="editPersonaModalLabel"
-  aria-hidden="true"
- >
-  <div
-    class="modal-dialog modal-dialog-centered"
-    ngDefaultControl
-    ngModel="{{ editPersona?.id }}"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="editUserModalLabel">
-          Editar perfil
-        </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-        <form #editForm="ngForm">
-          <div class="form-group">
-            <label for="name">Nombre</label>
-            <input
-              type="text"
-              [ngModel]="editPersona?.nombre"
-              name="name"
-              class="form-control"
-              id="name"
-              placeholder="Name"
-              Required
-            />
-          </div>
-          <input
-            type="hidden"
-            [ngModel]="editPersona?.id"
-            name="iduser"
-            class="form-control"
-            id="iduser"
-          />
-          <div class="form-group">
-            <label for="surname">Apellido</label>
-            <input
-              type="text"
-              [ngModel]="editPersona?.apellido"
-              name="surname"
-              class="form-control"
-              id="surname"
-              placeholder="Surname"
-              Required
-            />
-          </div>
-          <div class="form-group">
-            <label for="title">Título</label>
-            <input
-              type="text"
-              [ngModel]="editPersona?.titulo"
-              name="title"
-              class="form-control"
-              id="title"
-              placeholder="Title"
-              Required
-            />
-          </div>
-          <div class="form-group">
-            <label for="aboutme">Sobre mí</label>
-            <input
-              type="text"
-              [ngModel]="editPersona?.sobremi"
-              name="aboutme"
-              class="form-control"
-              id="aboutme"
-              placeholder="About me"
-              Required
-            />
-          </div>
-          <div class="form-group">
-            <label for="imgprofile">Foto de perfil</label>
-            <input
-              type="text"
-              [ngModel]="editPersona?.img"
-              name="urlimgprofile"
-              class="form-control"
-              id="urlimageprofile"
-              placeholder="Image Profile"
-              Required
-            />
-          </div>
-          <div class="form-group">
-            <label for="urlImgbanner">Banner</label>
-            <input
-              type="text"
-              [ngModel]="editPersona?.imgbanner"
-              name="urlImagebanner"
-              class="form-control"
-              id="urlImagebanner"
-              placeholder="Banner URL"
-              Required
-            />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              id="edit-project-modal"
-              data-bs-dismiss="modal"
-              class="btn btn-secondary"
-            >
-              Cerrar
-            </button>
-            <button
-              (click)="onEditPersona(editForm.value)"
-              data-bs-dismiss="modal"
-              class="btn btn-primary"
-            >
-              Guardar Cambios
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
