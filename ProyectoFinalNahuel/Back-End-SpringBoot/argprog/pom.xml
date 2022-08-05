@@ -14,18 +14,12 @@
     <name>argprog</name>
     <description>Backend de mi portfolio de argentina programa</description>
     <properties>
-        <java.version>17</java.version>
+        <!-- <java.version>17</java.version> -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>15</maven.compiler.release>
     </properties>
     
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.8.1</version>
-        </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -89,7 +83,7 @@
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>           
+                <artifactId>spring-boot-maven-plugin</artifactId>      
                 <configuration>
                     <excludes>
                         <exclude>
